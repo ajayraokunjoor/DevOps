@@ -1,0 +1,14 @@
+--- # Playbook Example
+- hosts: localhost
+  become: yes
+  task:
+    # Prepare system for operational use. 
+    -name: install cli web client
+    apt:
+      name: elinks
+      state: latest
+
+    -name: install network utilities
+     apt:
+       name: nmpa-cat
+       state: latest
